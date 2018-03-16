@@ -3,8 +3,10 @@ let driverId = 0, tripId = 0, passengerId = 0
 
 class Driver {
   constructor(name) {
-    this.id = ++driverIdId
+    this.id = ++driverId
     this.name = name
+
+    store.drivers.push(this)
   }
 
   trips() {
@@ -12,7 +14,7 @@ class Driver {
       return trip.userId === this.id
     })
   }
-  
-  
+
+
 
 }
