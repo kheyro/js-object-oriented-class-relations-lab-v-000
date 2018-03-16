@@ -40,6 +40,12 @@ class Trip {
     store.trips.push(this)
   }
 
+  driver() {
+    return store.drivers.find(function (d) {
+      return d.id === this.driverId
+    })
+  }
+  
   passenger() {
     return store.passengers.find(function (p) {
       return p.id === this.passengerId
