@@ -3,7 +3,7 @@ let driverId = 0, tripId = 0, passengerId = 0
 
 class Driver {
   constructor(name) {
-    this.id = ++userId
+    this.id = ++driverIdId
     this.name = name
   }
 
@@ -12,5 +12,7 @@ class Driver {
       return trip.userId === this.id
     })
   }
+  
+  
 
 }
