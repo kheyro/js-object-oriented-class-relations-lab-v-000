@@ -62,7 +62,7 @@ class Trip {
   }
 
   passenger() {
-    return store.passengers.find(function (p) {
+    return store.passengers.find(p => {
       return p.id == this.passengerId
     })
   }
