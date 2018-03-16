@@ -25,6 +25,12 @@ class Passenger {
 
     store.passengers.push(this)
   }
+
+  trips() {
+    return store.trips.filter(function (trip) {
+      return trip.driverId === this.id
+    }).bind(this)
+  }
 }
 
 class Trip {
