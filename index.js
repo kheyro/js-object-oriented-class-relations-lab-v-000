@@ -14,7 +14,4 @@ class Driver {
       return trip.userId === this.id
     })
   }
-
-
-
 }
