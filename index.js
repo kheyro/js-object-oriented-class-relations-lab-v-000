@@ -42,7 +42,6 @@ class Trip {
 
   passenger() {
     return store.passengers.find(function (p) {
-      console.log(p, this.passengerId)
       return p.id === this.passengerId
     })
   }
