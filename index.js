@@ -28,15 +28,19 @@ class Passenger {
 class Trip {
   constructor(driver, passenger) {
     this.id = ++tripId
-    this.driverId = driver.id
-    this.passengerId = passenger.id
+    if (driver) {
+      this.driverId = driver.id
+    }
+    if (passenger) {
+      this.passengerId = passenger.id
+    }
 
     store.trips.push(this)
   }
 
   passenger() {
     return store.passengers.find(function (p) {
-      return p.id === this.passenger.id
+      return p.id === this.passengerId
     })
   }
 }
